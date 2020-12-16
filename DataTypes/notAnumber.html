@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Not A Number</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        #displayNaN{
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Representing Not a Number(NaN)</h1>
+    <div id="displayNaN"></div>
+
+    <script>
+        document.querySelector("#displayNaN").innerHTML = "\"Some Text\" / 2 = "+("Some Text"/ 2)+"<br>\"Some Text\" / 2 + 10 = "+("Some Text"/ 2 + 10);
+    </script>
+</body>
+</html>

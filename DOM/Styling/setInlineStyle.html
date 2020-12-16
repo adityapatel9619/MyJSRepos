@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Inline Style</title>
+</head>
+<body>
+    <h1>Set Inline Style</h1>
+
+    <p id="para">Hello this is some text</p>
+    <button id="mybtn">Submit</button>
+
+    <script>
+        document.querySelector('#mybtn').addEventListener('click',function(){
+           document.getElementById('para').style.color = "#ff0b0b";
+           document.getElementById('para').style.fontWeight = "bold";
+        });
+    </script>
+</body>
+</html>

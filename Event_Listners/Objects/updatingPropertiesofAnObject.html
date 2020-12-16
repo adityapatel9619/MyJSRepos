@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Properties Of An Object</title>
+</head>
+<body>
+    <h1>Set Properties Of An Object</h1>
+    <script>
+        var person = {
+            name : "Aditya",
+            age:21,
+            gender:"Male",
+            jobStatus:"UnEmployed"
+        }
+        document.write("Adding New Value To The Object");
+        document.write("<br>");
+        person.country= "India"; // Setting New Value
+        document.write(person.country);
+        
+        document.write("<br>");
+        document.write("<br>");
+        
+        document.write("Iterating Person Object")
+        document.write("<br>");
+        for(var i in person){
+            document.write(person[i]+"<br>")
+        }
+        
+        document.write("<br>");
+        document.write("<br>");
+
+        document.write("Updating the value of Object");
+        person.jobStatus="Intern";
+        document.write("<br>");
+        document.write(person.jobStatus);
+
+        document.write("<br>");
+        document.write("<br>");
+
+        document.write("Iterating Person Object After Updating")
+        document.write("<br>");
+        for(var i in person){
+            document.write(person[i]+"<br>")
+        }
+
+    </script>
+</body>
+</html>

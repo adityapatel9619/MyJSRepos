@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Element</title>
+</head>
+<body>
+    <h1>Add New Element</h1>
+    <br>
+    <script>
+        var fruits=["Apple","Mango","Strawberry","Peach"];
+        document.write("Befor Adding");
+        document.write("<br>");
+        for(fruit of fruits){
+            document.write(fruit+"<br>");
+        }
+        document.write("<br>");
+        fruits.push("Watermelon");
+        document.write("After Pushing");
+        document.write("<br>");
+        for(fruit of fruits){
+            document.write(fruit+"<br>");
+        }
+    </script>
+</body>
+</html>

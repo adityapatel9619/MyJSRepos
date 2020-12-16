@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Array</title>
+</head>
+<body>
+    <h1>Filter Array</h1>
+    <p>It filters the number in array according to the condition</p>
+    <script>
+        var array = [32,33,37,34,53.258,19,28,7,10]
+
+        function filterNumber(arr){
+            return arr >= 20;
+        }
+
+        document.write(array.filter(filterNumber));
+    </script>
+</body>
+</html>

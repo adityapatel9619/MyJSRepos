@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Logical Operator</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        #disp{
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>JS Logical Operator</h1>
+    <div id="disp"></div>
+
+    <script>
+        let year = 2020;
+        if(year % 4 == 0 || year % 400 == 0){
+            document.querySelector("#disp").innerHTML = year+" is a leap year";
+        }
+        else{
+            document.querySelector("#disp").innerHTML = year+" is not leap year";
+        }
+    </script>
+</body>
+</html>

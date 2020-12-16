@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Propertie Value Of An Object</title>
+</head>
+<body>
+    <h1>Get Propertie Value Of An Object</h1>
+    <script>
+        var book= {
+            "Name":"The Complete Reference : C# 4.0",
+            "Author": "Herbert Schildt",
+            "year": 2017
+        };
+
+        document.write("<hr>");
+        document.write("Dot Notation");
+        document.write("<hr>");
+        //Dot Notation 
+        document.write("<br>");
+
+        document.write("Book Name : "+book.Name);
+        document.write("<br>");
+        document.write("Author Name : "+book.Author)
+        document.write("<br>");
+        document.write("Year of Publishing : "+book.year)
+        document.write("<br>");
+
+        document.write("<br>");
+        document.write("<hr>");
+        // Bracket Notation
+        document.write("Bracket Notation");
+
+        document.write("<br>");
+        document.write("<hr>");
+
+        document.write("Book Name : "+book["Name"]);
+        document.write("<br>");
+        document.write("Author Name : "+book["Author"])
+        document.write("<br>");
+        document.write("Year of Publishing : "+book["year"])
+        document.write("<br>");
+        document.write("<hr>");
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New ELement At Beginning</title>
+</head>
+<body>
+    <h1>Add New ELement At Beginning</h1>
+    <script>
+         var fruits=["Apple","Mango","Strawberry","Peach"];
+        document.write("Befor Adding");
+        document.write("<br>");
+        for(fruit of fruits){
+            document.write(fruit+"<br>");
+        }
+        document.write("<br>");
+        fruits.unshift("Watermelon");
+        document.write("After Pushing");
+        document.write("<br>");
+        for(fruit of fruits){
+            document.write(fruit+"<br>");
+        }
+    </script>
+</body>
+</html>

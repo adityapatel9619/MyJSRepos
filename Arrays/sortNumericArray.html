@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort Numeric Array</title>
+</head>
+<body>
+    <h1>Sort Numeric Array</h1>
+    <script>
+        var num = [5, 20, 10, 75, 50, 100];
+        document.write(num);
+        document.write("<br>");
+        function Sort(a,b){
+            return a-b;
+        }
+        document.write(num.sort(Sort));
+        document.write("<br>");
+        document.write("Sorting Using First Digit Of Number:")
+        document.write("<br>");
+        document.write(num.sort());
+
+
+        /*
+        When comparing 40 and 100, the sort() method calls the compare function(40,100).
+        The function calculates 40-100, and returns -60 (a negative value).
+        The sort function will sort 40 as a value lower than 100.
+        */
+    </script>
+</body>
+</html>

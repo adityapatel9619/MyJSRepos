@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Returning Multiple Value</title>
+</head>
+<body>
+    <h1>Returning Multiple Value From Function</h1>
+    <br>
+    <script>
+        function divideNumber(dividend, divisor){
+            var quotient = dividend / divisor;
+            var arr = [dividend,divisor,quotient];
+            return arr;
+        }
+
+        var all = divideNumber(10,2);
+        document.write(all[0]);
+        document.write('<br>');
+        document.write(all[1]);
+        document.write('<br>');
+        document.write(all[2]);
+    </script>
+</body>
+</html>

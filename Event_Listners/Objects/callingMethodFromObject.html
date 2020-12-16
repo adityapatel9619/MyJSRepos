@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calling Method From Object</title>
+</head>
+<body>
+    <h1>Calling Method From Object</h1>
+    <script>
+        var person = {
+            name  : "Aditya",
+            age : 21,
+            gender : "Male",
+            displayName : function(){
+                return this.name;
+            },
+            displayFullName : function(){
+                return this.name + " Patel";
+            }
+        }
+
+        document.write("Display Object Function Using dot Notation");
+        document.write("<br>");
+        
+
+        document.write(person.displayName());
+        
+        document.write("<br>");
+        document.write("<br>");
+        document.write("Display Object Function Using dot Notation");
+        document.write("<br>");
+        document.write(person["displayFullName"]())
+    </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX Call With API Country</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+</head>
+<body>
+    <h1>AJAX Call With API Country On Button Click</h1>
+    
+    <button id="mybtn" onclick="bindData();">Show Data</button>
+    <div id="displayCountry"></div>
+
+    <script>
+
+        // $(document).ready(function () {
+        //     bindData();
+        // });
+    
+        function bindData(){
+            $('#displayCountry').html('');
+            
+            $.ajax({
+                url:'http://www.tutorialplus.net/api/Country',
+                type: 'GET',
+                contentType: 'application/json',
+                success: function(data){
+                    var sr = 0;
+                    $.each(data,function(key,item){
+                        sr += 1;
+                        // console.log(key);
+                        // console.log(item.Capital);
+                        $('#displayCountry').append("<table><tr><th>Name</th><th>Capital</th></tr> <tr><td>"+item.CountryName +"</td><td>"+item.Capital+"</td></tr></table>")
+                    });
+                },
+                error: function(jqXHR,textStatus,err){
+                    alert(err);
+                }
+            });
+        }
+
+
+
+
+            // document.getElementById('mybtn').addEventListener('click',bindData);
+
+            // function bindData(){
+                
+            //     const xhr = new XMLHttpRequest();
+
+            //     xhr.open('GET','http://www.tutorialplus.net/api/Country',true);
+                
+            //     xhr.onload = function(){
+                    
+            //         let data = JSON.parse(this.responseText);
+                    
+            //         if(this.status === 200){
+            //             document.getElementById('displayCountry').innerHTML = `
+            //             <table>
+            //                 <tr>
+            //                 <th>Country</th>
+            //                 <th>Capital</th>
+            //                 </tr>
+            //                 <tr>
+            //                 <td>${data.CountryName }</td>
+            //                 <td>${data.Capital}</td>
+            //                 </tr>
+            //             </table>
+            //             `;
+            //         }
+            //     }
+            //     xhr.send();
+            // }
+
+    </script>
+</body>
+</html>
+

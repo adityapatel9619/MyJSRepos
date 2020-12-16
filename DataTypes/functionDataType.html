@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Data Type</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        #disp{
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Function Data Type</h1>
+    <div id="disp"></div>
+
+
+    <script>
+        let greet = function(){
+            return "\"Hello Aditya\"";
+        }
+
+        document.querySelector('#disp').innerHTML = greet();
+    </script>
+</body>
+</html>

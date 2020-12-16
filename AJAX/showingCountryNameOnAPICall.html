@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Showing Data On API Call</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <h1>Showing Data On API Call</h1>
+    <br>
+    <table>
+        <tr>
+            <th>Sr No.</th>
+            <th>Country</th>
+            <th>Capital</th>
+        </tr>
+        <tbody id="tbodyDisp">
+            <tr>
+                <td>0</td>
+                <td>India</td>
+                <td>Delhi</td>
+            </tr>
+        </tbody>
+    </table>   
+    
+    <script>
+        $(document).ready(function(){
+            bindData();
+        });
+
+        function bindData(){
+            // $('#tbodyDisp').html('');
+            $.ajax({
+                    url:'http://www.tutorialplus.net/api/Country',
+                    type:'GET',
+                    contentType:'application/json',
+                    success:function(data){
+                        var sr = 0;
+
+                        $.each(data,function(index,value){
+                            sr += 1;
+                            $('#tbodyDisp').append('<tr> <td>'+sr+'</td> <td>'+value.CountryName +'</td> <td>'+value.Capital +'</td> </tr>')
+                        });
+                    },
+                    error: function(jqXHR,textStatus,err){
+                        alert(err);
+                    }
+                });
+        }
+    </script>
+</body>
+</html>

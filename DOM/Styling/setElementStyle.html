@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Element Style</title>
+</head>
+<body>
+    <h1>Set Element Style</h1>
+
+    <p id="text">This is some text</p>
+
+    <script>
+        document.getElementById('text').addEventListener('mouseover',function(){
+
+            document.getElementById('text').style.color = "#ff0b0b";
+            document.getElementById('text').style.fontWeight = "bold";
+        })
+
+    </script>
+</body>
+</html>

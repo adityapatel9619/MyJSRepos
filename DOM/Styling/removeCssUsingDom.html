@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove CSS Using DOM</title>
+
+    <style>
+        .text{
+            background: yellow;
+            opacity: 0.7;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Remove CSS Using DOM</h1>
+
+    <p id="para" class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br> 
+        Numquam ex, perspiciatis esse nemo commodi adipisci quae impedit,<br> 
+        eaque repellat eius aspernatur reiciendis voluptas<br>
+         cupiditate accusantium saepe exercitationem consectetur cumque libero.</p>
+
+         <script>
+             const id = document.getElementById('para');
+            //  id.classList.remove('text');
+            id.classList.remove('text');
+             id.classList.toggle("visible");
+         </script>
+</body>
+</html>

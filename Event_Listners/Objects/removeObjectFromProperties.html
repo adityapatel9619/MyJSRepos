@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Properties Of An Object</title>
+</head>
+<body>
+    <h1>Remove Properties Of An Object</h1>
+    <script>
+        var person = {
+            name : "Aditya",
+            age:21,
+            gender:"Male",
+            jobStatus:"UnEmployed"
+        }
+
+        document.write("Iterating The values Before Deleting");
+        document.write("<br>");
+        for(var i in person){
+            document.write(person[i]+"<br>");
+        }
+
+        // Deleting
+        delete person.jobStatus;
+        document.write("<hr>")
+
+        
+        document.write("Iterating The values After Deleting");
+        document.write("<br>");
+        for(var i in person){
+            document.write(person[i]+"<br>");
+        }
+
+    </script>
+</body>
+</html>

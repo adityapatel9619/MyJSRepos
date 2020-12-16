@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating JSON Array</title>
+</head>
+<body>
+    <h1>Creating JSON Array</h1>
+
+        <p id="demo"></p>
+    <script>
+        var personJSON=[
+            {
+            "name":"Aditya",
+            "age":21,
+            "gender":"Male"
+            },
+            {
+                "name":"Aditi",
+                "age":14,
+                "gender":"Female"
+            }
+        ];
+
+        // for(var i in personJSON){
+        //     document.write(personJSON[i].name+"<br>");
+        //     document.write(personJSON[i].age+"<br>");
+        //     document.write(personJSON[i].gender+"<br>");
+        //     document.write("<hr>");
+        // }
+
+            var mypersonJSON = JSON.stringify(personJSON);
+
+            document.getElementById("demo").innerHTML = mypersonJSON;            
+
+    </script>
+</body>
+</html>

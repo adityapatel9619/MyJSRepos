@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Object</title>
+</head>
+<body>
+    <h1>Creating Object</h1>
+    <script>
+        var person = {
+            name : "Aditya",
+            age : 21,
+            gender : "Male",
+            displayName : function(){
+                return person.name + " Patel";
+            } 
+        };
+
+        document.write("Name : "+person.name);
+        document.write("<br>")
+        document.write("Age : "+person.age)
+        document.write("<br>")
+        document.write("Gender : "+person.gender)
+        document.write("<br>")
+        document.write("Full Name : "+person.displayName())
+    </script>
+</body>
+</html>

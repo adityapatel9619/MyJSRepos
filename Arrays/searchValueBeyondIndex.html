@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Value Beyond Index</title>
+</head>
+<body>
+    <h1>Search Value Beyond Index</h1>
+    <script>
+        var arr = [1,0,3,1,false,5,1,4,7];
+        // arr.indexof(searching_Element, star_searching_from_which_position);
+        //so above first occurence of the specified number will be displayed 
+        document.write(arr.indexOf(1,2)+"<br>"); //here 3 will be displayed because 1 is occuring at index 3 as per the condition specified
+        document.write(arr.indexOf(3,2));
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested JSON To JavaScript</title>
+</head>
+<body>
+    <h1>Nested JSON To JavaScript</h1>
+    
+    
+    
+    <script>
+            var persond=`{
+                "person":
+                {   
+                    "name":"Aditya",
+                    "age":21,
+                    "gender":"Male",
+                    "Books":{
+                        "name":"The Complete Reference : C# 4.0",
+                        "author":"Herbert Schildt",
+                        "publisher":"McGraw Hills"
+                    }
+                }
+            }`;
+
+            var js = JSON.parse(persond);
+            // var js = JSON.stringify(persond);
+
+            function printValues(js){
+                for(var i in js){
+                    if(js[i] instanceof Object){
+                        printValues(js[i]);
+                    }
+                    else{
+                        document.write(js[i]+"<br>");
+                    }
+                }
+            };
+            printValues(js);
+
+            document.write("<hr>");
+
+            document.write(js["Books"]["name"]);
+    </script>
+</body>
+</html>
+

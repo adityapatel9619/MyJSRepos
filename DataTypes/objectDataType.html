@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Data Type</title>
+</head>
+<style>
+    h1{
+        text-align: center;
+    }
+    #disp{
+        text-align: center;
+        margin-top: 10px;
+    }
+    #disp2{
+        margin-top: 10px;
+        text-align: center;
+    }
+</style>
+<body>
+    <h1>Object Data Type</h1>
+    <div id="disp"></div>
+    <div id="disp2"></div>
+
+    <script>
+            let emptyObject = {};
+            let personInfo = { "name":"Aditya", "lastname":"Patel", "age":"36"};
+            let carInfo = {"company":"Hyundai","model":"i10 Asta","doors":"5"};
+
+            document.querySelector('#disp').innerHTML = "Name : "+personInfo.name+"<br>Last Name : "+personInfo.lastname+"<br>Age : "+personInfo.age;
+            document.querySelector('#disp2').innerHTML = "Company : "+carInfo.company+"<br>Model : "+carInfo.model+"<br>Doors: "+carInfo.doors;
+    </script>
+</body>
+</html>

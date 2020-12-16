@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+    <title>Key Down Event</title>
+
+    <script>
+        $(document).ready(function(){
+            
+            $('#mytxt').keydown(function(e){
+                $('#mytxt').fadeOut();
+                console.log(document.getElementById("mybtn"));
+                console.log(document.getElementById("mytxt"));
+            }),
+            $('#mybtn').click(function(){
+                $('#mytxt').fadeIn();
+                $('#mytxt').prop('disabled',true);
+                $('#mybtn').prop('disabled',true);
+                console.log(document.getElementById("mybtn"));
+                console.log(document.getElementById("mytxt"));
+            })
+            
+        });
+    </script>
+
+</head>
+<body>
+    <div class="container">
+
+        <h1>Key Down Event In jQuery</h1>
+        Enter Text : <input type="text" id="mytxt">
+        <button id="mybtn">Revive</button>
+    </div>
+</body>
+</html>

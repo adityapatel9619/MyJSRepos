@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Showing Infinity Value</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        #infinity_value{
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Representing Infinity Value</h1>
+    <div id="infinity_value"></div>
+
+    <script>
+        document.querySelector("#infinity_value").innerHTML = "16 / 0 = "+(16/0)+"<br>-16 / 0 = "+(-16/0)+"<br>16 / -0 = "+(16/-0);
+    </script>
+</body>
+</html>

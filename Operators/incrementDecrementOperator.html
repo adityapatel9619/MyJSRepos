@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Increment Decrement Operator</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        #disp0{
+            text-align: center;
+            margin-top: 10px;
+        }
+        #disp1{
+            text-align: center;
+            margin-top: 10px;
+        }
+        #disp2{
+            text-align: center;
+            margin-top: 10px;
+        }
+        #disp3{
+            text-align: center;
+            margin-top: 10px;
+        }
+        #disp4{
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>JS Increment Decrement Operator</h1>
+    <div id="disp0"></div>
+    <div id="disp1"></div>
+    <div id="disp2"></div>
+    <div id="disp3"></div>
+    <div id="disp4"></div>
+
+    <script>
+        document.querySelector("#disp0").innerHTML = "x = 10";
+        let x = 10;
+        document.querySelector("#disp1").innerHTML = "x++ = "+(x++);
+        x = 10;
+        document.querySelector("#disp2").innerHTML = "++x = "+(++x);
+        x = 10;
+        document.querySelector("#disp3").innerHTML = "x-- = "+(x--);
+        x = 10;
+        document.querySelector("#disp4").innerHTML = "--x = "+(--x);
+    </script>
+</body>
+</html>

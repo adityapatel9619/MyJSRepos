@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Element By Class Name</title>
+</head>
+<body>
+    <h1>Get Element By Class Name</h1>
+    <h2>Note :<b>Press CTRL + SHIFT +I</b></h2>
+
+    <p class="para">Hello This Paragraph 1</p>
+    <p class="para">Hello This Paragraph 2</p>
+    <p class="para">Hello This Paragraph 3</p>
+
+    <script>
+        console.log(document.getElementsByClassName('para')[0].innerText);
+        console.log(document.getElementsByClassName('para')[1].innerText);
+        console.log(document.getElementsByClassName('para')[2].innerText);
+    </script>
+</body>
+</html>

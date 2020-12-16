@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funstion Value Passed To Other Function</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        #disp{
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+        <h1>Function Value Passed To Second Function As Parameter</h1>
+        <div id="disp"></div>
+
+        <script>
+            function Greet(name){
+                return "Hello "+name;
+            }
+
+            function displayGreet(greetinFunc,userName){
+                return greetinFunc(userName);
+            }
+
+                let g = displayGreet(Greet,"Aditya");
+            document.querySelector('#disp').innerHTML = g
+        </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating JSON Object</title>
+</head>
+<body>
+    <h1>Creating JSON Object</h1>
+    <p id="demo"></p>
+    <script>
+        //JS Object
+
+        var car ={
+            "company": "Hyundai",
+            "model":"i10 Asta",
+            "engine":"1.2L Kappa",
+            "price":160000
+        };
+
+            //Parsing the object to JSON Object
+
+            var newCar = JSON.stringify(car);
+
+            document.getElementById("demo").innerHTML = newCar;
+
+    </script>
+</body>
+</html>

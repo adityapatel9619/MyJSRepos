@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string to JavaScript object and access individual values</title>
+</head>
+<body>
+    <h1>JSON string to JavaScript object and access individual values</h1>
+
+    <script>
+        var son = '{ "name":"Aditya","age":21,"country":"INDIA"}';
+
+        document.write(son);
+        document.write("<br>");
+        var js = JSON.parse(son);
+
+        document.write(js.name);
+        document.write("<br>");
+        document.write(js.age);
+        document.write("<br>");
+        document.write(js.country);
+    </script>
+</body>
+</html>

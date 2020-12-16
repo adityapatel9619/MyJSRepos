@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Object Data Structure</title>
+</head>
+<body>
+    <h1>JSON Object Data Structure</h1>
+
+    <h2>Press CTRL + SHIFT + I to open console browser</h2>
+    <p id="demo"></p>
+
+    <script>
+        // This file is in JSON Format
+
+        var json = `{
+            "book":[{
+                "name":"Let Us Data Structure",
+                "author":"Yashwant Kanetkar",
+                "publisher":"BPB Publication",
+                "publishyear":2017,
+                "bestseller":true
+            },
+            {
+                "name":"The Complete Reference : C# 4.0",
+                "author":"Herbert Schildt",
+                "publisher":"McGraw Hills",
+                "publishyear":2017,
+                "bestseller":true
+            }
+            ]
+        }`;
+
+        document.getElementById("demo").innerHTML = json;
+        var x = JSON.parse(json)
+
+        console.log(x);
+    </script>
+</body>
+</html>

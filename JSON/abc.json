@@ -1,0 +1,12 @@
+{
+    "person":{
+        "name":"Aditya",
+        "age":21,
+        "gender":"Male"
+    },
+    "person2":{
+        "name":"Aditi",
+        "age":14,
+        "gender":"Female"
+    }
+}

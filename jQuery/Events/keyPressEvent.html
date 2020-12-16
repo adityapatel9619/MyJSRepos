@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+    
+    <title>Key Press Event</title>
+
+    <script>
+        let i = 0;
+        $(document).ready(function(){
+            $('input').keypress(function(){
+                $('span').text(i +=1);
+            })
+        });
+    </script>
+</head>
+<body>
+    Enter your name:<input type="text">
+    <br>
+    <p>KeyPress: <span>0</span> </p>
+</body>
+</html>

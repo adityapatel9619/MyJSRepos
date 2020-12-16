@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Value Of An Attribute</title>
+</head>
+<body>
+    <h1>Change Value Of An Attribute</h1>
+    <p><a href="#" id="link">Link</a></p>
+
+    <script>
+        console.log(document.getElementById('link'));
+        document.getElementById('link').setAttribute('href','http://adityapatel.freevar.com/Hipstrify.io/index.html');
+        document.getElementById('link').setAttribute('target','_blank');
+    </script>
+</body>
+</html>

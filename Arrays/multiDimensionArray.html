@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MultiDimensional Array</title>
+</head>
+<body>
+    <h1>MultiDimensional Array</h1>
+
+    <script>
+        var table = [
+                        ["R1C1","R1C2","R1C3"],
+                        ["R2C1","R2C2","R2C3"],
+                        ["R3C1","R3C2","R3C3"]
+                    ];
+
+            for(var i = 0; i<table.length;i++){
+                document.write(table[i]+"<hr>");
+                /*
+                Prints 
+                
+                R1C1,R1C2,R1C3
+                */
+                for(var j = 0; j<table[i].length;j++){
+                    document.write(table[i][j]+ "<hr>");
+
+                    /*
+                    Prints 
+
+                    R1C1
+                    R1C2
+                    R1C3
+                    */
+                }
+            }                    
+    </script>
+</body>
+</html>

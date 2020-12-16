@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeOf Operator</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        #disp{
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>TypeOf Operator</h1>
+    <div id="disp"></div>
+
+    <script>
+        document.querySelector('#disp').innerHTML = "1 : "+typeof(1)+"<br>\"Aditya\" :"+typeof("Aditya")+"<br>1.7e10 :"+typeof(1.7e10)+"<br>True : "+typeof(true)+"<br>{Name : \"Aditya\"} : "+typeof({"name":"Aditya"});
+    </script>
+</body>
+</html>

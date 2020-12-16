@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Assignment Operator</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        #disp{
+            text-align: center;
+            margin-top: 10px;
+        }
+        #disp2{
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>JS Assignment Operator</h1>
+    <div id="disp"></div>
+    <div id="disp2"></div>
+
+    <script>
+        let x = 10;
+        document.querySelector("#disp").innerHTML = "Value of &nbsp;x : "+x;
+        x+=390;
+        document.querySelector("#disp2").innerHTML = "Value of x+=390 : "+x;
+    </script>
+</body>
+</html>

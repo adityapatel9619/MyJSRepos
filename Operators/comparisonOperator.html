@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Comparison Operator</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        #dis{
+            text-align: center;
+            margin-top: 10px;
+        }
+        #disp{
+            text-align: center;
+            margin-top: 10px;
+        }
+        #disp2{
+            text-align: center;
+            margin-top: 10px;
+        }
+        #disp3{
+            text-align: center;
+            margin-top: 10px;
+        }
+        #disp4{
+            text-align: center;
+            margin-top: 10px;
+        }
+        #disp5{
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>JS Comparison Operator</h1>
+    <div id="dis"></div>
+    <div id="disp"></div>
+    <div id="disp2"></div>
+    <div id="disp3"></div>
+    <div id="disp4"></div>
+    <div id="disp5"></div>
+
+    <script>
+        let x = 4;
+        let y = 5;
+
+        document.querySelector("#dis").innerHTML = " x = "+x+"<br> y = "+y;
+        document.querySelector("#disp").innerHTML = "x == y : "+ (x==y);
+        document.querySelector("#disp2").innerHTML = "x === y : "+ (x===y);
+        document.querySelector("#disp3").innerHTML = "x != y : "+ (x!=y);
+        document.querySelector("#disp4").innerHTML = "x >= y : "+ (x>=y);
+        document.querySelector("#disp5").innerHTML = "x <= y : "+ (x<=y);
+    </script>
+</body>
+</html>

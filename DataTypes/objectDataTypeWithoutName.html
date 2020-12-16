@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Name Without Quotes</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        #disp{
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<h1>Object Name Without Quotes</h1>
+<div id="disp"></div>
+    
+    
+    
+    <script>
+            let car = {
+                model:"i10 Asta",
+                color:"Blue",
+                doors:5
+            }
+
+            document.querySelector('#disp').innerHTML = "Model : "+car.model+"<br>Color : "+car.color+"<br>Doors : "+car.doors;
+    </script>
+</body>
+</html>

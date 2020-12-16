@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Max and Min Value</title>
+</head>
+<body>
+    <h1>Find Max and Min Value</h1>
+    <script>
+        var num =[3, -7, 10, 8, 15, 2,19];
+        
+        function Max(arr){
+            return Math.max.apply(null,arr);
+        }
+
+        function Min(arr){
+            return Math.min.apply(null,arr);
+        }
+
+        document.write("Maximum Value");
+        document.write("<br>");
+        document.write(Max(num));
+        document.write("<br>");
+        document.write("Minimum Value");
+        document.write("<br>");
+        document.write(Min(num));
+    </script>
+</body>
+</html>

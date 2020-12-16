@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+    <title>Key Up Event</title>
+
+    <script>
+        $(document).ready(function(){
+            $('#mytxt').keyup(function(){
+                $('#mytxt').fadeOut();
+            }),
+            $('#mybtn').click(function(){
+                $('#mytxt').fadeIn();
+                $('#mytxt').prop('disabled',true);
+                $('#mybtn').prop('disabled',true);
+            })
+        });
+    </script>
+</head>
+<body>
+    <h1>Key Up Event In jQuery</h1>
+    Enter Text : <input type="text" id="mytxt">
+    <button id="mybtn">Revive</button>
+</body>
+</html>

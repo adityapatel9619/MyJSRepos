@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Value Of An Attribute</title>
+</head>
+<body>
+    <h1>Get Value Of An Attribute</h1>
+    <p><a href="https://www.google.com/" target="_blank" id="Link">Google</a></p>
+    
+    <script>
+        var link = document.getElementById("Link");
+        var href = link.getAttribute('href');
+        
+        document.write(href);
+        href = link.getAttribute('target');
+        document.write("<br>");
+        document.write(href);
+
+        console.log(document.getElementById('Link').getAttribute('target'));
+    </script>
+</body>
+</html>

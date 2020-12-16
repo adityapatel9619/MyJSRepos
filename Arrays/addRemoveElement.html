@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add and Remove Element</title>
+</head>
+<body>
+    <h1>Add and Remove Element</h1>
+    <script>
+        var fruits=["Apple","Mango","Strawberry","Peach"];
+        document.write("Befor Adding");
+        document.write("<br>");
+        for(fruit of fruits){
+            document.write(fruit+"<br>");
+        }
+        document.write("<br>");
+        document.write("After Removing")
+        document.write("<br>");
+        var removed = fruits.splice(0,1);
+        for(fruit of fruits){
+            document.write(fruit+"<br>");
+        }
+        document.write("<br>");
+        var add = fruits.splice(2,1,"Red Current","Mulberry");
+        document.write("After adding")
+        document.write("<br>");
+        for(fruit of fruits){
+            document.write(fruit+"<br>");
+        }
+    </script>
+</body>
+</html>

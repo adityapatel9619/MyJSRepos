@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Nested JSON Objects</title>
+</head>
+<body>
+    <h1>Creating Nested JSON Objects</h1>
+
+    <p id="demo"></p>
+    <script>
+        var person={
+            "name":"Aditya",
+            "age":21,
+            "gender":"Male",
+
+            "Books":[
+                {
+                    "name":"The Complete Reference : C# 4.0",
+                    "author":"Herbert Schildt",
+                    "publisher":"McGraw Hills"
+                },
+                {
+                    "name":"Let Us C",
+                    "author":"Yashwant Kanetkar",
+                    "publisher":"BPB Publications"
+                }
+            ]
+        }
+
+            // Re-assingment and Conversion of variable person into JSON
+
+            person = JSON.stringify(person);
+
+        document.getElementById("demo").innerHTML= person;
+    </script>
+</body>
+</html>

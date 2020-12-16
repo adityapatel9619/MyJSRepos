@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converting JSON to JS Object</title>
+</head>
+<body>
+    <h1>Converting JSON to JS Object</h1>
+
+        <h2>JSON OBJECT</h2>
+        
+        <p id="demo"></p>
+
+        <h2>CONVERTING TO OBJECT</h2>
+
+        <p id="demo2"></p>
+    <script>
+        // JSON FORMAT
+
+        var person ={
+            "name":"Aditya",
+            "age":21,
+            "gender":"male"
+        };
+
+        
+        var myPerson = JSON.stringify(person);
+        document.getElementById("demo").innerHTML = myPerson;
+
+        
+        var newPerson = JSON.parse(myPerson);
+        document.getElementById("demo2").innerHTML = newPerson;
+
+
+
+    </script>
+</body>
+</html>

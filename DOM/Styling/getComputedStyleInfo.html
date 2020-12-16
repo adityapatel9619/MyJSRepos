@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Computed Style Information</title>
+    <style>
+        #para{
+            color:green;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h1>Get Computed Style Information</h1>
+    <p id="para">Lorem, ipsum dolor sit amet consectetur adipisicing elit.<br>
+        Maiores eveniet quas placeat nihil error? Iste laborum maxime voluptatem,<br> 
+        cumque accusamus error consectetur deserunt harum repellat rerum assumenda blanditiis sint molestias.</p>
+     
+        <script>
+         const para = document.getElementById("para");
+         const x = window.getComputedStyle(para);
+
+         document.write(x.getPropertyValue('color'));
+         document.write('<br>');
+         document.write(x.getPropertyValue('font-size'));
+         document.write('<br>');
+         document.write(x.getPropertyValue('font-weight'));
+         document.write('<br>');
+         document.write(x.getPropertyValue('font-style'));
+        </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS String Operator</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        #disp{
+            text-align: center;
+            margin-top: 10px;
+        }
+        #disp2{
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>JS String Operator</h1>
+    <div id="disp"></div>
+    <div id="disp2"></div>
+
+    <script>
+        let string1 = "Hello";
+        let string2 = " Aditya";
+
+        document.querySelector("#disp").innerHTML = string1+string2;
+        string1 +=string2;
+        document.querySelector("#disp2").innerHTML = string1;
+
+    </script>
+</body>
+</html>

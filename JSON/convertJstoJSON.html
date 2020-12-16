@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converting Object To JSON</title>
+</head>
+<body>
+    <h1>Converting Object To JSON</h1>
+
+    
+    <p id="demo"></p>
+
+    <script>
+
+        // Object format
+        var person = {
+                name : "Aditya",
+                age :21,
+                city : "Mumbai" 
+        };
+
+        // conversion to JSON
+
+        var myJSON = JSON.stringify(person);
+        document.getElementById("demo").innerHTML = myJSON;
+
+    </script>
+</body>
+</html>

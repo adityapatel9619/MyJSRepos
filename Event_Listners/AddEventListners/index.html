@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listeners</title>
+    
+    <style>
+        /* DIVISON CSS */
+        .container{
+            text-align: center;
+
+        }
+
+
+
+        /* EVENT CSS */
+        #click_event{
+            background-color: bisque;
+            color: black;
+            text-align: center;
+            margin-top: 10px;
+        }
+        #contextmenu_event{
+            background-color: antiquewhite;
+            color: black;
+            text-align: center;
+            margin-top: 10px;
+        }
+        #mouseover_event{
+            background-color: blanchedalmond;
+            color: black;
+            text-align: center;
+            margin-top: 10px;
+        }
+        #mouseout_event{
+            background-color: burlywood;
+            color: black;
+            text-align: center;
+            margin-top: 10px;
+        }
+        #keydown_event{
+            color: black;
+            text-align: center;
+            margin-top: 10px;            
+        }
+        #keyup_event{
+            color: black;
+            text-align: center;
+            margin-top: 10px;
+        }
+        #keypress_event{
+            color: black;
+            text-align: center;
+            margin-top: 10px;
+        }
+        #onfocus_event{
+            color: black;
+            text-align: center;
+            margin-top: 10px;            
+        }
+        #onblur_event{
+            color: black;
+            text-align: center;
+            margin-top: 10px;
+        }
+        #onchange_event{
+            color: black;
+            text-align: center;
+            margin-top: 10px;
+        }
+        #onsubmit_event{
+            color: black;
+            text-align: center;
+            margin-top: 10px;
+        }
+        #onload_event{
+            color: black;
+            text-align: center;
+            margin-top: 10px;           
+        }
+        #resize_event{
+            color: black;
+            text-align: center;
+            margin-top: 10px;
+            background-color: navajowhite;
+        }
+
+    </style>
+
+
+</head>
+<body>
+    <div class="container">
+
+        <h1>Add Event Listners</h1>
+        <p>Few Click's To Activate All Event Listeners</p>
+        <button id="myBtn">Click here</button>
+    </div>
+    <div id="click_event"></div>
+    <div id="contextmenu_event"></div>
+    <div id="mouseover_event"></div>
+    <div id="mouseout_event"></div>
+    <div id="keydown_event">
+        <input type="text" id="keyinput" placeholder="Keydown">
+    </div>
+    <div id="keyup_event">
+        <input type="text" id="keyupinput" placeholder="Keyup">
+    </div>
+    <div id="keypress_event">
+        <input type="text" id="keypressinput" placeholder="keypress">
+    </div>
+    <div id="onfocus_event">
+        <input type="text" id="onfocusinput" placeholder="onfocus">
+    </div>
+    <div id="onblur_event">
+        <input type="text" id="onblurinput" placeholder="onblur">
+    </div>
+    <div id="onchange_event">
+        <p>Select new car from the list:(OnChange Event)</p>
+        <select id="mySelect">
+            <option value="Audi">Audi</option>
+            <option value="BMW">BMW</option>
+            <option value="Mercedes">Mercedes</option>
+            <option value="Volvo">Volvo</option>
+        </select>
+        <p id="display_onchange"></p>
+    </div>
+    <div id="onsubmit_event">
+        <p>OnSubmit Event</p>
+        <form action="/index.html" id="form_onsubmit">
+        <input type="text" name="first_name" placeholder="Enter Name" id='inp' required>
+        <input type="submit" value="submit">
+        </form>
+        <p id="display_onsubmit"></p>
+    </div>
+    <div id="onload_event">
+        <p>OnLoad Event</p>
+        <iframe src="D:\Web Desiging Practice\JavaScript_SIIT\AddEventListners" frameborder="0" id="display_onload"></iframe>
+        <p id="display_onload_msg"></p>
+    </div>
+    <div id="resize_event">
+        <p id="display_resize_event"></p>
+    </div>
+    
+
+
+
+    <script>
+        const btn = document.getElementById('myBtn');
+        const keyInp = document.getElementById('keyinput');
+        const keyUpe = document.getElementById('keyupinput');
+        const keyPres = document.getElementById('keypressinput');
+        const onfoc = document.getElementById('onfocusinput');
+        const obblr = document.getElementById('onblurinput');
+        const onchng = document.getElementById('mySelect');
+        const onsbmt = document.getElementById('form_onsubmit');
+        const onlod = document.getElementById('display_onload');
+        const onresz = document.getElementById('display_resize_event');
+
+        loadEventListners();
+
+        function loadEventListners(){
+
+        btn.addEventListener('click', myFun);
+        btn.addEventListener('contextmenu',context);
+        btn.addEventListener('mouseover',mouseOver);
+        btn.addEventListener('mouseout',mouseOut);
+        keyInp.addEventListener('keydown',keyDown);
+        keyUpe.addEventListener('keyup',keyUp);
+        keyPres.addEventListener('keypress',keyPress);
+        onfoc.addEventListener('focus',OnFocus);
+        obblr.addEventListener('blur',OnBlur)
+        onchng.addEventListener('change',OnChange);
+        onsbmt.addEventListener('submit',OnSubmit);
+        onlod.addEventListener('load',OnLoad);
+        onresz.addEventListener('resize',OnResize)
+        }
+        
+        // Click Event :myFun()
+            function myFun(){
+               document.getElementById('click_event').innerHTML = 'Click Event Occurred Here';
+            }
+        // Context Menu Event: context() 
+            function context(){
+                document.getElementById('contextmenu_event').innerHTML = 'Right click button pressed : Context Event Occurred Here';
+            }
+        // Mouseover Event
+        function mouseOver(){
+            document.getElementById('mouseover_event').innerHTML = 'Mouse over event occurred';
+        }
+        // Mouseout Event
+        function mouseOut(){
+            document.getElementById('mouseout_event').innerHTML = 'Mouse out event occurred';
+        }
+        // Keydown Event
+        function keyDown(){
+            document.getElementById('keydown_event').innerHTML = '<p style="background-color: coral;">KeyInput event occurred due to which input box disappears</p>';
+        }
+        // Keyup Event
+        function keyUp(){
+            document.getElementById('keyup_event').innerHTML = '<p style="background-color: cornsilk;">KeyUp event occurred due to which input box disappears</p>'
+        }
+        // Keypress Event
+        function keyPress(){
+            document.getElementById('keypress_event').innerHTML = '<p style="background-color: darkkhaki;">KeyPress event occurred due to which input box disappears</p>'
+        }
+        // Onfocus Event
+        function OnFocus(){
+            document.getElementById('onfocus_event').innerHTML = '<p style="background-color: darksalmon;">OnFocus event occurred due to which input box disappears</p>'
+        }
+        // OnBlurr Event
+        function OnBlur(){
+            document.getElementById('onblur_event').innerHTML = '<p style="background-color: tan;">OnBlur event occurred due to which input box disappears</p>'
+        }
+
+        // OnFocus Event
+        function OnChange(){
+            document.getElementById('display_onchange').innerHTML = '<p style="background-color: wheat;">You Selected: '+onchng.value+' </p>'
+        }
+        // OnSubmit Event
+        function OnSubmit(e){
+            document.getElementById('display_onsubmit').innerHTML ='<p style="background-color: thistle;">Form Submitted Successfully</p>';
+            document.getElementById('inp').value ='';
+            e.preventDefault();
+        }
+        // OnLoad Event
+        function OnLoad(){
+            document.getElementById('display_onload_msg').innerHTML = '<p style="background-color:rosybrown;">Page Loaded Successfuly</p>'
+        }
+        // OnResize Event
+        function OnResize(){
+            let width = window.outerWidth;
+            let height = window.outerHeight;
+            let txt = "Window size: width=" + width + ", height=" + height;
+            document.getElementById('display_resize_event').innerHTML = txt;
+            
+        }
+        window.onresize = OnResize();
+    </script>
+</body>
+</html>
+

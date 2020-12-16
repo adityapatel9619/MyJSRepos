@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+    <title>Showing Data With AJAX & JSON</title>
+</head>
+<body>
+    <h1>Showing Data With AJAX & JSON</h1>
+
+    <button id="btn">Click Here</button>
+    <br><br>
+    <div id="display"></div>
+
+    <script>
+        document.getElementById("btn").addEventListener('click',displayData);
+
+        function displayData(e){
+            var xhr = new XMLHttpRequest();
+
+            xhr.open('GET','data.json',true);
+
+                xhr.onload = function(){
+
+                    const info = JSON.parse(this.responseText);
+
+                    if(this.status === 200){
+                        document.getElementById('display').innerHTML = `
+                            <table>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Age</th>
+                                    <th>Gender</th>
+                                    <th>Country</th>
+                                </tr>    
+                                <tr>
+                                    <td>${info.name}</td>
+                                    <td>${info.age}</td>
+                                    <td>${info.gender}</td>
+                                    <td>${info.country}</td>
+                                </tr>
+                            </table>
+                        `;  
+                    }
+                }
+
+            xhr.send();
+        }
+    </script>
+</body>
+</html>
+
+
+
