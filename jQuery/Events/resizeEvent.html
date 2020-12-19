@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+    <title>Resize Event</title>
+
+    <script>
+        $(document).ready(function(){
+            $(window).bind("resize",function(){
+                $('h1').text("Window Width: "+$(window).width()+", Window Height: "+$(window).height());
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Resize Event In jQuery</h1>
+
+    </div>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>How to run code on resize event in jQuery.</title>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<style>
+    p{
+        padding: 20px;
+        font: 20px sans-serif;
+        background: #f0e68c;
+    }
+</style>
+<script>
+$(document).ready(function(){
+    $(window).resize(function() {
+        $(window).bind("resize", function(){ 
+            $("p").text("Window width: " + $(window).width() + ", " + "Window height: " + $(window).height());
+        });
+    });
+});
+</script>
+</head> 
+<body>
+    <p>Hello World, Welcome to Tutorial Plus</p>
+</body>
+</html> -->
