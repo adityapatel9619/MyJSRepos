@@ -3,4 +3,10 @@ h2 {
 }
 ul li a {
   text-decoration: none;
+  /* color: white; */
+}
+
+body {
+  background: #0d0c0c;
+  color: white;
 }
